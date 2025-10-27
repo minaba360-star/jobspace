@@ -22,7 +22,7 @@ function Accueil() {
   useEffect(() => {
         const fetchOffers = async () => {
       try {
-        const response = await fetch('https://localhost:3000/offres');
+        const response = await fetch('/api/offres');
         if (!response.ok) throw new Error('Erreur lors du chargement des offres');
         const data = await response.json();
         setOffers(data);
